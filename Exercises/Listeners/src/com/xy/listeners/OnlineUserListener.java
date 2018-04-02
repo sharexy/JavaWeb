@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSessionListener;
 public class OnlineUserListener implements HttpSessionListener, HttpSessionAttributeListener
 	, ServletContextListener
 
-		{
+	{
 	
 	private ServletContext application=null;
 	
@@ -39,6 +39,8 @@ public class OnlineUserListener implements HttpSessionListener, HttpSessionAttri
 	public void sessionCreated(HttpSessionEvent event) {
 		// TODO Auto-generated method stub
 		String username=(String)event.getSession().getAttribute("username");
+		
+		//输出始终为null
 		System.out.println("创建session用户名为"+username);
 		
 	}
