@@ -1,0 +1,5 @@
+1. 注意struts.xml配置文件的文件名不能写错。
+
+2. 注意struts.xml配置文件的存放位置为src根目录，编译后会在目录文件WebRoot/WEB-INF/classes/目录下生成对应文件。
+
+3. 注意Login.jsp中form的action对应struts.xml中的action name。
