@@ -11,6 +11,7 @@
   
   <filter>
   		<filter-name>struts2</filter-name>
+	  	<!-- 从struts2.1开始不推荐使用org.apache.struts2.dispatcher.FilterDispatcher，而使用org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter -->
   		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
   </filter>
   <filter-mapping>
