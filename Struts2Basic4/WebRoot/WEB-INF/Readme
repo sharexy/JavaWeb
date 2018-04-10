@@ -1,0 +1,15 @@
+1. 注意struts.xml配置文件的文件名不能写错。
+
+2. 注意struts.xml配置文件的存放位置为src根目录，编译后会在目录文件WebRoot/WEB-INF/classes/目录下生成对应文件。
+
+3. 注意Login.jsp中form的action对应struts.xml中的action name。
+
+4. LoginAction.java继承ActionSupport类，重写validate()方法实现校验功能；注意struts.xml添加input对应的资源视图。
+
+5. 输出国际化信息
+5.1 在struts.xml文件中, <struts>根下添加<constant name="struts.custom.i18n.resources" value="basename" />
+5.2 在src根目录下新建properties文件， 文件格式basename_语言代码_国家代码.properties
+5.3 在properties文件中添加资源文件代码， 例login.username=username
+5.4 修改原网页中的标签元素，例如<s:textfield name="username" label="用户名" />，更改为<s:textfield name="username" key="login.username" />，注意删除label，否则资源环境配置文件将不起作用
+5.5 在properties文件中添加资源文件代码， 例username.required
+5.6 修改LoginAction中validate()的this.addFieldError("username", "必须输入用户名");改成this.addFieldError("username", getText("username.required"));
