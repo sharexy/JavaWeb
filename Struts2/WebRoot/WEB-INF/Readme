@@ -1,0 +1,2 @@
+1. Struts2内建类型转换器-基本数据类型（封装类型同）
+2. 使用s标签时，记得在页面添加<%@ taglib prefix="s" uri="/struts-tags"%>
